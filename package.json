@@ -1,0 +1,45 @@
+{
+  "name": "mcp-reports-server",
+  "version": "1.0.0",
+  "description": "MCP server (Express + Streamable HTTP) exposing Business Chat reports as MCP tools",
+  "type": "module",
+  "main": "dist/server.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test \"tests/**/*.test.ts\"",
+    "test:e2e": "E2E=1 tsx --test \"tests/**/*.e2e.test.ts\"",
+    "dev:token": "tsx scripts/dev-token.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adel-elbamb/MCP-Server-.git"
+  },
+  "keywords": [
+    "mcp",
+    "reports"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Adel-elbamb/MCP-Server-/issues"
+  },
+  "homepage": "https://github.com/Adel-elbamb/MCP-Server-#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.0",
+    "dotenv": "^18.0.5",
+    "express": "^5.2.1",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.4",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
